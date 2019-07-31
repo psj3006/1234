@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+<!-- DB에 접근하기 위한 설정을 작성한 참조파일
+	 : JNDI (Java Naming Diretory Interface) -->
+	 
+	<Resource
+			auth="Container"
+			name="jdbc/oracle_test"
+			type="javax.sql.DataSource"
+			driverClassName="oracle.jdbc.driver.OracleDriver"
+			factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+			url="jdbc:oracle:thin:@localhost:1521:xe"
+			username="hr"
+			password="1111"
+			maxActive="20"
+			maxIdle="3"
+			maxWait="1" />
+</Context>
